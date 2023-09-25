@@ -11,5 +11,21 @@
       50,
       261228
     ]
+  },
+  {
+    "duration": 2.260307,
+    "colour": "red",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 1,
+    "time": [
+      2023,
+      9,
+      25,
+      18,
+      19,
+      17,
+      30221
+    ]
   }
 ]
