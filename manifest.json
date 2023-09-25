@@ -1,0 +1,21 @@
+{
+  "image_name": "cyberdojofoundation/csharp_nunit:1452bb7",
+  "display_name": "C#, NUnit",
+  "filename_extension": [
+    ".cs"
+  ],
+  "max_seconds": 10,
+  "tab_size": 4,
+  "exercise": "Saddle Points",
+  "version": 2,
+  "created": [
+    2023,
+    9,
+    25,
+    18,
+    18,
+    50,
+    261228
+  ],
+  "id": "aRtmcX"
+}
