@@ -107,5 +107,21 @@
       35,
       20391
     ]
+  },
+  {
+    "duration": 2.26958,
+    "colour": "green",
+    "predicted": "red",
+    "revert_if_wrong": "off",
+    "index": 7,
+    "time": [
+      2023,
+      9,
+      26,
+      17,
+      56,
+      30,
+      862829
+    ]
   }
 ]

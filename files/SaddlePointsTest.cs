@@ -8,7 +8,7 @@ public class SaddlePointsTest
     public void Une_matrice_de_zeros_n_a_pas_de_saddle_points()
     {
         SaddlePoints sp = new SaddlePoints();
-        sp.InitFromArray(new Array() 
+        sp.InitFromArray(new int[,]
                          { 
                              {0, 0, 0, 0, 0},
                              {0, 0, 0, 0, 0},
