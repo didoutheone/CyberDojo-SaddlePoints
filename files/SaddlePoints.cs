@@ -7,16 +7,7 @@ public class SaddlePoints
     
     public SaddlePoints()
     {
-    }
-    
-    public void Zero()
-    {
-        Zero(ref _array);
-    }
-    
-    private void Zero(ref int[,] array)
-    {
-        array = new int[,]
+        _array = new int[,]
         { 
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0},
@@ -25,7 +16,6 @@ public class SaddlePoints
             {0, 0, 0, 0, 0}
         };
     }
-    
     
     public void SetPoint(int x, int y, int value)
     {
@@ -39,8 +29,14 @@ public class SaddlePoints
     {
         List<Tuple<int,int>> result = new List<Tuple<int,int>>();
         
-        int[,] minsEtMaxs = new int[5,5];
-        Zero(ref minsEtMaxs);
+        int[,] minsEtMaxs = new int[,]
+        { 
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0}
+        };
         
         // Get maxs of rows and set 1 for them in a matrix
         for(int i = 0; i < 5; i++)
@@ -69,6 +65,15 @@ public class SaddlePoints
             {
                 if(minsEtMaxs[i,j] == 2) result.Add(new Tuple<int,int>(i,j));
             }
+        }
+        
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 5; j++)
+            {
+                Console.Write(minsEtMaxs[i,j] + " ");
+            }
+            Console.WriteLine();
         }
         
         return result;

@@ -12,9 +12,7 @@ public class SaddlePointsTest
     public void Une_matrice_de_zeros_n_a_que_des_saddle_points()
     {
         SaddlePoints sp = new SaddlePoints();
-        sp.Zero();
         
-        // a simple example to start you off
         Assert.AreEqual(25, sp.GetSaddlePoints().Count);
     }
     
@@ -22,7 +20,6 @@ public class SaddlePointsTest
     public void Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points()
     {
         SaddlePoints sp = new SaddlePoints();
-        sp.Zero();
         
         /*
             {1, 0, 0, 0, 0},

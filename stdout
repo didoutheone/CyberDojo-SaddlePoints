@@ -5,13 +5,25 @@ Runtime Environment
 Test Files
     ./RunTests.dll
 
+=> SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points
+0 0 0 0 1 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+=> SaddlePointsTest.Une_matrice_de_zeros_n_a_que_des_saddle_points
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
 
 Errors, Failures and Warnings
 
 1) Failed : SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points
   Expected: 1
   But was:  20
-  at SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points () [0x00000] in <f4417c5af97d40cb963270bb61411587>:0 
+  at SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points () [0x00000] in <b4bb4eaa589c4fd7bf2d640a732c403b>:0 
 
 Run Settings
     DisposeRunners: True
@@ -25,8 +37,8 @@ Test Run Summary
   Overall result: Failed
   Test Count: 2, Passed: 1, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0
     Failed Tests - Failures: 1, Errors: 0, Invalid: 0
-  Start time: 2023-09-26 18:38:14Z
-    End time: 2023-09-26 18:38:15Z
-    Duration: 0.738 seconds
+  Start time: 2023-09-26 18:44:28Z
+    End time: 2023-09-26 18:44:29Z
+    Duration: 0.746 seconds
 
 Results (nunit3) saved as TestResult.xml
