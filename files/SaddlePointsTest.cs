@@ -38,4 +38,26 @@ public class SaddlePointsTest
         Assert.AreEqual(1, sp.GetSaddlePoints().Count);
     }
     
+    [Test]
+    public void Une_matrice_diagonale_a_zero_saddle_points()
+    {
+        SaddlePoints sp = new SaddlePoints();
+        
+        /*
+            {1, 0, 0, 0, 0},
+            {0, 1, 0, 0, 0},
+            {0, 0, 1, 0, 0},
+            {0, 0, 0, 1, 0},
+            {0, 0, 0, 0, 1}
+        */
+        sp.SetPoint(0,0,1);
+        sp.SetPoint(1,1,1);
+        sp.SetPoint(2,2,1);
+        sp.SetPoint(3,3,1);
+        sp.SetPoint(4,4,1);
+        
+        // a simple example to start you off
+        Assert.AreEqual(0, sp.GetSaddlePoints().Count);
+    }
+    
 }

@@ -31,6 +31,19 @@ MinsMaxs Array :
 2 2 2 2 2 
 2 2 2 2 2 
 2 2 2 2 2 
+=> SaddlePointsTest.Une_matrice_diagonale_a_zero_saddle_points
+Work Array :
+1 0 0 0 0 
+0 1 0 0 0 
+0 0 1 0 0 
+0 0 0 1 0 
+0 0 0 0 1 
+MinsMaxs Array :
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
 
 Run Settings
     DisposeRunners: True
@@ -42,9 +55,9 @@ Run Settings
 
 Test Run Summary
   Overall result: Passed
-  Test Count: 2, Passed: 2, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
-  Start time: 2023-09-26 18:48:40Z
-    End time: 2023-09-26 18:48:41Z
-    Duration: 0.736 seconds
+  Test Count: 3, Passed: 3, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2023-09-26 18:54:08Z
+    End time: 2023-09-26 18:54:08Z
+    Duration: 0.756 seconds
 
 Results (nunit3) saved as TestResult.xml
