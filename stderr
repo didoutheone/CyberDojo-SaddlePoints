@@ -1,1 +1,3 @@
-SaddlePoints.cs(11,17): error CS0246: The type or namespace name `Tuple' could not be found. Are you missing `System' using directive?
+SaddlePointsTest.cs(10,30): error CS0246: The type or namespace name `Array' could not be found. Are you missing `System' using directive?
+SaddlePointsTest.cs(20,31): error CS1061: Type `SaddlePoints' does not contain a definition for `GetSaddlePoints' and no extension method `GetSaddlePoints' of type `SaddlePoints' could be found. Are you missing an assembly reference?
+SaddlePoints.cs(4,14): (Location of the symbol related to previous error)
