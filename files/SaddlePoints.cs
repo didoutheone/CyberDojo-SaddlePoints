@@ -2,7 +2,7 @@ public class SaddlePoints
 {
     private int[,] _array = new int [5,5];
     
-    public void InitFromArray
+    public void InitFromArray(int[,] initArray)
     {
     }
     

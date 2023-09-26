@@ -1,2 +1,1 @@
-SaddlePoints.cs(5,12): error CS0547: `SaddlePoints.InitFromArray': property or indexer cannot have void type
-SaddlePoints.cs(7,5): error CS0548: `SaddlePoints.InitFromArray': property or indexer must have at least one accessor
+SaddlePoints.cs(9,12): error CS0246: The type or namespace name `List' could not be found. Are you missing `System.Collections.Generic' using directive?
