@@ -11,6 +11,6 @@ public class SaddlePoints
     
     public List<Tuple<int,int>> GetSaddlePoints()
     {
-        return null;
+        return new List<Tuple<int,int>>();
     }
 }

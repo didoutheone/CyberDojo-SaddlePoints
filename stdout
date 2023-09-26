@@ -7,14 +7,6 @@ Test Files
     ./RunTests.dll
 
 
-Errors, Failures and Warnings
-
-1) Error : SaddlePointsTest.Une_matrice_de_zeros_n_a_pas_de_saddle_points
-System.NullReferenceException : Object reference not set to an instance of an object
-  at SaddlePointsTest.Une_matrice_de_zeros_n_a_pas_de_saddle_points () [0x0001f] in <f0e7c4d07167468eb0b9eb18527d5bde>:0 
-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c4bddbfe864a4b8191bb818d6b204e9d>:0 
-
 Run Settings
     DisposeRunners: True
     WorkDirectory: /sandbox
@@ -24,11 +16,10 @@ Run Settings
     NumberOfTestWorkers: 4
 
 Test Run Summary
-  Overall result: Failed
-  Test Count: 1, Passed: 0, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0
-    Failed Tests - Failures: 0, Errors: 1, Invalid: 0
-  Start time: 2023-09-26 17:57:16Z
-    End time: 2023-09-26 17:57:16Z
-    Duration: 0.657 seconds
+  Overall result: Passed
+  Test Count: 1, Passed: 1, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2023-09-26 17:57:39Z
+    End time: 2023-09-26 17:57:40Z
+    Duration: 0.659 seconds
 
 Results (nunit3) saved as TestResult.xml
