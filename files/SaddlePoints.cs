@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class SaddlePoints
 {
     private int[,] _array = new int [5,5];
