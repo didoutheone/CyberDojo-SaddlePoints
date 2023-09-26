@@ -67,6 +67,17 @@ public class SaddlePoints
             }
         }
         
+        // Debug
+        Console.WriteLine("Work Array :");
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 5; j++)
+            {
+                Console.Write(_array[i,j] + " ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine("MinsMaxs Array :");
         for(int i = 0; i < 5; i++)
         {
             for(int j = 0; j < 5; j++)
