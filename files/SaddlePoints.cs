@@ -9,7 +9,7 @@ public class SaddlePoints
     {
     }
     
-    public List<Tuple<int,int>> getSaddlePoints()
+    public List<Tuple<int,int>> GetSaddlePoints()
     {
         return new List<Tuple<int,int>>();
     }

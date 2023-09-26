@@ -1,3 +1,12 @@
-SaddlePointsTest.cs(10,30): error CS0246: The type or namespace name `Array' could not be found. Are you missing `System' using directive?
-SaddlePointsTest.cs(20,31): error CS1061: Type `SaddlePoints' does not contain a definition for `GetSaddlePoints' and no extension method `GetSaddlePoints' of type `SaddlePoints' could be found. Are you missing an assembly reference?
-SaddlePoints.cs(4,14): (Location of the symbol related to previous error)
+SaddlePointsTest.cs(11,26): error CS0144: Cannot create an instance of the abstract class or interface `System.Array'
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
+SaddlePointsTest.cs(13,30): error CS1061: Type `System.Array' does not contain a definition for `Add' and no extension method `Add' of type `System.Array' could be found. Are you missing an assembly reference?
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
+SaddlePointsTest.cs(14,30): error CS1061: Type `System.Array' does not contain a definition for `Add' and no extension method `Add' of type `System.Array' could be found. Are you missing an assembly reference?
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
+SaddlePointsTest.cs(15,30): error CS1061: Type `System.Array' does not contain a definition for `Add' and no extension method `Add' of type `System.Array' could be found. Are you missing an assembly reference?
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
+SaddlePointsTest.cs(16,30): error CS1061: Type `System.Array' does not contain a definition for `Add' and no extension method `Add' of type `System.Array' could be found. Are you missing an assembly reference?
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
+SaddlePointsTest.cs(17,30): error CS1061: Type `System.Array' does not contain a definition for `Add' and no extension method `Add' of type `System.Array' could be found. Are you missing an assembly reference?
+/usr/lib/mono/4.5/mscorlib.dll (Location of the symbol related to previous error)
