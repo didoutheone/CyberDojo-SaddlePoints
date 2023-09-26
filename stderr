@@ -1,5 +1,1 @@
-SaddlePoints.cs(75,22): error CS0022: Wrong number of indexes `1' inside [], expected `2'
-SaddlePointsTest.cs(15,12): error CS1501: No overload for method `Zero' takes `0' arguments
-SaddlePoints.cs(13,17): (Location of the symbol related to previous error)
-SaddlePointsTest.cs(25,12): error CS1501: No overload for method `Zero' takes `0' arguments
-SaddlePoints.cs(13,17): (Location of the symbol related to previous error)
+SaddlePoints.cs(6,20): warning CS0649: Field `SaddlePoints._array' is never assigned to, and will always have its default value `null'

@@ -1,1 +1,42 @@
-Compilation failed: 3 error(s), 0 warnings
+Compilation succeeded - 1 warning(s)
+Runtime Environment
+   OS Version: Linux 4.14.291.218 
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    ./RunTests.dll
+
+
+Errors, Failures and Warnings
+
+1) Error : SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points
+System.NullReferenceException : Object reference not set to an instance of an object
+  at SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points () [0x0000c] in <ec4dc11e6e5143e1b999a80acc76f475>:0 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c4bddbfe864a4b8191bb818d6b204e9d>:0 
+
+2) Error : SaddlePointsTest.Une_matrice_de_zeros_n_a_que_des_saddle_points
+System.NullReferenceException : Object reference not set to an instance of an object
+  at SaddlePoints.GetRow (System.Int32 i) [0x00000] in <ec4dc11e6e5143e1b999a80acc76f475>:0 
+  at SaddlePoints.GetSaddlePoints () [0x0001c] in <ec4dc11e6e5143e1b999a80acc76f475>:0 
+  at SaddlePointsTest.Une_matrice_de_zeros_n_a_que_des_saddle_points () [0x0000c] in <ec4dc11e6e5143e1b999a80acc76f475>:0 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c4bddbfe864a4b8191bb818d6b204e9d>:0 
+
+Run Settings
+    DisposeRunners: True
+    WorkDirectory: /sandbox
+    ImageRuntimeVersion: 4.0.30319
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    NumberOfTestWorkers: 4
+
+Test Run Summary
+  Overall result: Failed
+  Test Count: 2, Passed: 0, Failed: 2, Warnings: 0, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 0, Errors: 2, Invalid: 0
+  Start time: 2023-09-26 18:36:50Z
+    End time: 2023-09-26 18:36:51Z
+    Duration: 0.754 seconds
+
+Results (nunit3) saved as TestResult.xml

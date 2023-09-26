@@ -7,10 +7,14 @@ public class SaddlePoints
     
     public SaddlePoints()
     {
+    }
+    
+    public void Zero()
+    {
         Zero(_array);
     }
     
-    public void Zero(int[,] array)
+    private void Zero(int[,] array)
     {
         array = new int[,]
         { 
@@ -72,7 +76,7 @@ public class SaddlePoints
     
     private int[] GetRow(int i)
     {
-        return _array[i];
+        return new int[] { _array[i,0], _array[i,1], _array[i,2], _array[i,3], _array[i,4] };
     }
     
     private int[] GetColumn(int j)
