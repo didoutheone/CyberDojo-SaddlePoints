@@ -1,1 +1,1 @@
-SaddlePoints.cs(6,20): warning CS0414: The private field `SaddlePoints._array' is assigned but its value is never used
+SaddlePoints.cs(26,12): error CS1520: Class, struct, or interface method must have a return type

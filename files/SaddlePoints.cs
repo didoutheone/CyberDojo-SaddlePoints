@@ -3,10 +3,29 @@ using System.Collections.Generic;
 
 public class SaddlePoints
 {
-    private int[,] _array = new int [5,5];
+    private int[,] _array;
     
-    public void InitFromArray(int[,] initArray)
+    public SaddlePoints()
     {
+        Zero();
+    }
+    
+    public void Zero()
+    {
+        _array = new int[,]
+        { 
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0}
+        };
+    }
+    
+    
+    public SetPoint(int x, int y, int value)
+    {
+        _array[x,y] = value;
     }
     
     public List<Tuple<int,int>> GetSaddlePoints()
