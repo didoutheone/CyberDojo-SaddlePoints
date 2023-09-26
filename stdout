@@ -1,1 +1,25 @@
-Compilation failed: 1 error(s), 0 warnings
+Compilation succeeded - 1 warning(s)
+Runtime Environment
+   OS Version: Linux 4.14.291.218 
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    ./RunTests.dll
+
+
+Run Settings
+    DisposeRunners: True
+    WorkDirectory: /sandbox
+    ImageRuntimeVersion: 4.0.30319
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    NumberOfTestWorkers: 4
+
+Test Run Summary
+  Overall result: Passed
+  Test Count: 1, Passed: 1, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2023-09-26 18:04:09Z
+    End time: 2023-09-26 18:04:09Z
+    Duration: 0.678 seconds
+
+Results (nunit3) saved as TestResult.xml

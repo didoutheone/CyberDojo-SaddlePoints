@@ -19,5 +19,7 @@ public class SaddlePoints
                 result.Add(new Tuple<int,int>(i,j));
             }
         }
+        
+        return result;
     }
 }

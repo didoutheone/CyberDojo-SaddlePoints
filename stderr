@@ -1,1 +1,1 @@
-SaddlePoints.cs(12,33): error CS0161: `SaddlePoints.GetSaddlePoints()': not all code paths return a value
+SaddlePoints.cs(6,20): warning CS0414: The private field `SaddlePoints._array' is assigned but its value is never used
