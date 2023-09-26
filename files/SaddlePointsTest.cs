@@ -25,4 +25,21 @@ public class SaddlePointsTest
         Assert.AreEqual(25, sp.GetSaddlePoints().Count);
     }
     
+    [Test]
+    public void Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points()
+    {
+        SaddlePoints sp = new SaddlePoints();
+        sp.InitFromArray(new int[,]
+                         { 
+                             {1, 0, 0, 0, 0},
+                             {2, 0, 0, 0, 0},
+                             {3, 0, 0, 0, 0},
+                             {4, 0, 0, 0, 0},
+                             {5, 0, 0, 0, 0}
+                         });
+        
+        // a simple example to start you off
+        Assert.AreEqual(1, sp.GetSaddlePoints().Count);
+    }
+    
 }

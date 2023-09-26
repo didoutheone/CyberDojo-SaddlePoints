@@ -7,6 +7,13 @@ Test Files
     ./RunTests.dll
 
 
+Errors, Failures and Warnings
+
+1) Failed : SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points
+  Expected: 1
+  But was:  25
+  at SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points () [0x00000] in <3fa66eca8e604659af332661c15735c2>:0 
+
 Run Settings
     DisposeRunners: True
     WorkDirectory: /sandbox
@@ -16,10 +23,11 @@ Run Settings
     NumberOfTestWorkers: 4
 
 Test Run Summary
-  Overall result: Passed
-  Test Count: 1, Passed: 1, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
-  Start time: 2023-09-26 18:04:09Z
-    End time: 2023-09-26 18:04:09Z
-    Duration: 0.678 seconds
+  Overall result: Failed
+  Test Count: 2, Passed: 1, Failed: 1, Warnings: 0, Inconclusive: 0, Skipped: 0
+    Failed Tests - Failures: 1, Errors: 0, Invalid: 0
+  Start time: 2023-09-26 18:06:56Z
+    End time: 2023-09-26 18:06:57Z
+    Duration: 0.731 seconds
 
 Results (nunit3) saved as TestResult.xml
