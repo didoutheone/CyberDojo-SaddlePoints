@@ -17,9 +17,9 @@ public class SaddlePoints
         };
     }
     
-    public void SetPoint(int x, int y, int value)
+    public void SetPoint(int row, int column, int value)
     {
-        _array[x,y] = value;
+        _array[row,column] = value;
     }
     
     // Saddle point :

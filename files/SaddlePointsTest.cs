@@ -29,10 +29,10 @@ public class SaddlePointsTest
             {5, 0, 0, 0, 0}
         */
         sp.SetPoint(0,0,1);
-        sp.SetPoint(0,1,2);
-        sp.SetPoint(0,2,3);
-        sp.SetPoint(0,3,4);
-        sp.SetPoint(0,4,5);
+        sp.SetPoint(1,0,2);
+        sp.SetPoint(2,0,3);
+        sp.SetPoint(3,0,4);
+        sp.SetPoint(4,0,5);
         
         // a simple example to start you off
         Assert.AreEqual(1, sp.GetSaddlePoints().Count);
