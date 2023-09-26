@@ -1,0 +1,5 @@
+SaddlePoints.cs(75,22): error CS0022: Wrong number of indexes `1' inside [], expected `2'
+SaddlePointsTest.cs(15,12): error CS1501: No overload for method `Zero' takes `0' arguments
+SaddlePoints.cs(13,17): (Location of the symbol related to previous error)
+SaddlePointsTest.cs(25,12): error CS1501: No overload for method `Zero' takes `0' arguments
+SaddlePoints.cs(13,17): (Location of the symbol related to previous error)
