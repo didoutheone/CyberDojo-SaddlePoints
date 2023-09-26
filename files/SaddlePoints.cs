@@ -25,6 +25,7 @@ public class SaddlePoints
         int[,] minsEtMaxs = GetZeroArray();
         
         GetMaxsOfRowsAndSetToOneInMinsEtMaxsArray(minsEtMaxs);
+        
         GetMinsOfColumnsAndAddOneInMinsEtMaxsArray(minsEtMaxs);
         
         // look for values 2 in the resulting matrix
@@ -36,25 +37,7 @@ public class SaddlePoints
             }
         }
         
-        // Debug
-        Console.WriteLine("Work Array :");
-        for(int i = 0; i < 5; i++)
-        {
-            for(int j = 0; j < 5; j++)
-            {
-                Console.Write(_array[i,j] + " ");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine("MinsMaxs Array :");
-        for(int i = 0; i < 5; i++)
-        {
-            for(int j = 0; j < 5; j++)
-            {
-                Console.Write(minsEtMaxs[i,j] + " ");
-            }
-            Console.WriteLine();
-        }
+        Debug(_array, minsEtMaxs);
         
         return result;
     }
@@ -146,5 +129,29 @@ public class SaddlePoints
             }
         }
     }
+    
+    private void Debug(int[,] workArray, int[,] minsMaxsArray)
+    {
+        // Debug
+        Console.WriteLine("Work Array :");
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 5; j++)
+            {
+                Console.Write(workArray[i,j] + " ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine("MinsMaxs Array :");
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 5; j++)
+            {
+                Console.Write(minsMaxsArray[i,j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+    
     
 }
