@@ -11,10 +11,10 @@ public class SaddlePoints
     
     public void Zero()
     {
-        Zero(_array);
+        Zero(ref _array);
     }
     
-    private void Zero(int[,] array)
+    private void Zero(ref int[,] array)
     {
         array = new int[,]
         { 
@@ -40,7 +40,7 @@ public class SaddlePoints
         List<Tuple<int,int>> result = new List<Tuple<int,int>>();
         
         int[,] minsEtMaxs = new int[5,5];
-        Zero(minsEtMaxs);
+        Zero(ref minsEtMaxs);
         
         // Get maxs of rows and set 1 for them in a matrix
         for(int i = 0; i < 5; i++)
