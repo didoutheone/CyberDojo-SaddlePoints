@@ -123,7 +123,7 @@ public class SaddlePoints
         return minimumsPositions.ToArray();
     }
     
-    private void GetMaxsOfRowsAndSetToOneInArray(int[,] array)
+    private void GetMaxsOfRowsAndSetToOneInMinsEtMaxsArray(int[,] array)
     {
         for(int i = 0; i < 5; i++)
         {
@@ -135,7 +135,7 @@ public class SaddlePoints
         }
     }
     
-    private void GetMinsOfColumnsAndAddOneInArray(int[,] array)
+    private void GetMinsOfColumnsAndAddOneInMinsEtMaxsArray(int[,] array)
     {
         for(int j = 0; j < 5; j++)
         {

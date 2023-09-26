@@ -1,1 +1,63 @@
-Compilation failed: 2 error(s), 0 warnings
+Runtime Environment
+   OS Version: Linux 4.14.291.218 
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    ./RunTests.dll
+
+=> SaddlePointsTest.Une_matrice_avec_une_colonne_incrementielle_a_un_unique_saddle_points
+Work Array :
+1 0 0 0 0 
+2 0 0 0 0 
+3 0 0 0 0 
+4 0 0 0 0 
+5 0 0 0 0 
+MinsMaxs Array :
+2 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+=> SaddlePointsTest.Une_matrice_de_zeros_n_a_que_des_saddle_points
+Work Array :
+0 0 0 0 0 
+0 0 0 0 0 
+0 0 0 0 0 
+0 0 0 0 0 
+0 0 0 0 0 
+MinsMaxs Array :
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+2 2 2 2 2 
+=> SaddlePointsTest.Une_matrice_diagonale_a_zero_saddle_points
+Work Array :
+1 0 0 0 0 
+0 1 0 0 0 
+0 0 1 0 0 
+0 0 0 1 0 
+0 0 0 0 1 
+MinsMaxs Array :
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+1 1 1 1 1 
+
+Run Settings
+    DisposeRunners: True
+    WorkDirectory: /sandbox
+    ImageRuntimeVersion: 4.0.30319
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+    NumberOfTestWorkers: 4
+
+Test Run Summary
+  Overall result: Passed
+  Test Count: 3, Passed: 3, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2023-09-26 19:00:04Z
+    End time: 2023-09-26 19:00:05Z
+    Duration: 0.690 seconds
+
+Results (nunit3) saved as TestResult.xml

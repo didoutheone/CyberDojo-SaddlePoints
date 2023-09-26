@@ -1,2 +1,0 @@
-SaddlePoints.cs(27,9): error CS0103: The name `GetMaxsOfRowsAndSetToOneInMinsEtMaxsArray' does not exist in the current context
-SaddlePoints.cs(28,9): error CS0103: The name `GetMinsOfColumnsAndAddOneInMinsEtMaxsArray' does not exist in the current context
