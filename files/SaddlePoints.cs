@@ -23,7 +23,7 @@ public class SaddlePoints
     }
     
     
-    public SetPoint(int x, int y, int value)
+    public void SetPoint(int x, int y, int value)
     {
         _array[x,y] = value;
     }
