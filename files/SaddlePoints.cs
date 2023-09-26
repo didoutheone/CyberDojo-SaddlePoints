@@ -11,6 +11,13 @@ public class SaddlePoints
     
     public List<Tuple<int,int>> GetSaddlePoints()
     {
-        return new List<Tuple<int,int>>();
+        List<Tuple<int,int>> result = new List<Tuple<int,int>>();
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j = 0; j < 5; j++)
+            {
+                result.Add(new Tuple<int,int>(i,j));
+            }
+        }
     }
 }

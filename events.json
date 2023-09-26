@@ -171,5 +171,21 @@
       28,
       215210
     ]
+  },
+  {
+    "duration": 1.231222,
+    "colour": "amber",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 11,
+    "time": [
+      2023,
+      9,
+      26,
+      18,
+      3,
+      48,
+      137243
+    ]
   }
 ]
