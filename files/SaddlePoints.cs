@@ -7,14 +7,7 @@ public class SaddlePoints
     
     public SaddlePoints()
     {
-        _array = new int[,]
-        { 
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0}
-        };
+        _array = GetZeroArray();
     }
     
     public void SetPoint(int row, int column, int value)
@@ -29,34 +22,10 @@ public class SaddlePoints
     {
         List<Tuple<int,int>> result = new List<Tuple<int,int>>();
         
-        int[,] minsEtMaxs = new int[,]
-        { 
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0}
-        };
+        int[,] minsEtMaxs = GetZeroArray();
         
-        // Get maxs of rows and set 1 for them in a matrix
-        for(int i = 0; i < 5; i++)
-        {
-            int[] maxs = GetPositionsOfMaximums(GetRow(i));
-            foreach(int max in maxs)
-            {
-                minsEtMaxs[i, max] = 1;
-            }
-        }
-        
-        // get mins of columns and add 1 for them in a matrix
-        for(int j = 0; j < 5; j++)
-        {
-           int[] mins = GetPositionsOfMinimums(GetColumn(j));
-            foreach(int min in mins)
-            {
-                minsEtMaxs[min, j] += 1;
-            }
-        }
+        GetMaxsOfRowsAndSetToOneInMinsEtMaxsArray(minsEtMaxs);
+        GetMinsOfColumnsAndAddOneInMinsEtMaxsArray(minsEtMaxs);
         
         // look for values 2 in the resulting matrix
         for(int i = 0; i < 5; i++)
@@ -90,6 +59,18 @@ public class SaddlePoints
         return result;
     }
     
+    private int[,] GetZeroArray()
+    {
+        return new int[,]
+        { 
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0}
+        };
+    }
+    
     private int[] GetRow(int i)
     {
         return new int[] { _array[i,0], _array[i,1], _array[i,2], _array[i,3], _array[i,4] };
@@ -99,8 +80,7 @@ public class SaddlePoints
     {
         return new int[] { _array[0,j], _array[1,j], _array[2,j], _array[3,j], _array[4,j] };
     }
-                                               
-                                               
+                                                                                        
     private int[] GetPositionsOfMaximums(int[] row)
     {
         int max = Int32.MinValue;
@@ -143,5 +123,28 @@ public class SaddlePoints
         return minimumsPositions.ToArray();
     }
     
+    private void GetMaxsOfRowsAndSetToOneInArray(int[,] array)
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            int[] maxs = GetPositionsOfMaximums(GetRow(i));
+            foreach(int max in maxs)
+            {
+                array[i, max] = 1;
+            }
+        }
+    }
+    
+    private void GetMinsOfColumnsAndAddOneInArray(int[,] array)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+           int[] mins = GetPositionsOfMinimums(GetColumn(j));
+            foreach(int min in mins)
+            {
+                array[min, j] += 1;
+            }
+        }
+    }
     
 }

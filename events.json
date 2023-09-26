@@ -379,5 +379,21 @@
       9,
       290922
     ]
+  },
+  {
+    "duration": 1.268621,
+    "colour": "amber",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 24,
+    "time": [
+      2023,
+      9,
+      26,
+      18,
+      59,
+      36,
+      889342
+    ]
   }
 ]
