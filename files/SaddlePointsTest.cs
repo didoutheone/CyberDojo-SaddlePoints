@@ -4,8 +4,12 @@ using NUnit.Framework;
 [TestFixture]
 public class SaddlePointsTest
 {
+    // Saddle point :
+    // value >= any in its row
+    // value <= any in its column
+    
     [Test]
-    public void Une_matrice_de_zeros_n_a_pas_de_saddle_points()
+    public void Une_matrice_de_zeros_n_a_que_des_saddle_points()
     {
         SaddlePoints sp = new SaddlePoints();
         sp.InitFromArray(new int[,]
@@ -18,6 +22,7 @@ public class SaddlePointsTest
                          });
         
         // a simple example to start you off
-        Assert.AreEqual(0, sp.GetSaddlePoints().Count);
+        Assert.AreEqual(25, sp.GetSaddlePoints().Count);
     }
+    
 }
