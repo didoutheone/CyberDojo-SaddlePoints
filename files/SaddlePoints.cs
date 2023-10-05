@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace MySaddlePoints
 {
@@ -35,60 +36,58 @@ namespace MySaddlePoints
 
         private List<Cell> GetCellsWithMaxValueOfEachRow()
         {
-            List<Cell> result = new List<Cell>();
-            for (int i = 0; i < ARRAY_SIZE; i++)
-            {
-                List<Cell> row = GetRow(i);
-                IEnumerable<Cell> cellsWithMaxValuesForThisRow = (from cell in row
-                                                                  group cell by cell.Value into grpByValue
-                                                                  orderby grpByValue.Key descending
-                                                                  select grpByValue).First();
-
-                result.AddRange(cellsWithMaxValuesForThisRow);
-            }
-
-            return result;
+            return (from row in Rows                                    // for each row
+                        select
+                        (
+                             from cell in row                           // - look the cells of that row
+                             group cell by cell.Value into grpByValue   // - group them by value
+                             orderby grpByValue.Key descending          // - order the groups by value descending (so the first group has the greatest value)
+                             select grpByValue                          // - select the groups
+                        ).First()                                       // - keep only the top one group
+                    ).SelectMany(cellList => cellList).ToList();        // finally : flatten the List of List
         }
 
         private List<Cell> GetCellsWithMinValueOfEachColumn()
         {
-            List<Cell> result = new List<Cell>();
-            for (int i = 0; i < ARRAY_SIZE; i++)
-            {
-                List<Cell> column = GetColumn(i);
-                IEnumerable<Cell> cellsWithMinValuesForThisColumn = (from cell in column
-                                                                     group cell by cell.Value into grpByValue
-                                                                     orderby grpByValue.Key ascending
-                                                                     select grpByValue).First();
-
-                result.AddRange(cellsWithMinValuesForThisColumn);
-            }
-
-            return result;
+            return (from column in Columns                              // for each column
+                    select
+                        (
+                             from cell in column                        // - look the cells of that column
+                             group cell by cell.Value into grpByValue   // - group them by value
+                             orderby grpByValue.Key ascending           // - order the groups by value ascending (so the first group has the lowest value)
+                             select grpByValue                          // - select the groups
+                        ).First()                                       // - keep only the top one group
+                    ).SelectMany(cellList => cellList).ToList();        // finally : flatten the List of List
         }
 
-        private List<Cell> GetRow(int rowIndex)
+        private IEnumerable<List<Cell>> Rows
         {
-            List<Cell> row = new List<Cell>();
-
-            for (int i = 0; i < ARRAY_SIZE; i++)
+            get
             {
-                row.Add(new Cell(rowIndex, i, _array[rowIndex, i]));
+                return (
+                            from rowIndex in Enumerable.Range(0, ARRAY_SIZE)
+                            select 
+                            (
+                                from columnIndex in Enumerable.Range(0, ARRAY_SIZE)
+                                select new Cell(rowIndex, columnIndex, _array[rowIndex, columnIndex])
+                            ).ToList<Cell>()
+                       ).AsEnumerable<List<Cell>>();
             }
-
-            return row;
         }
 
-        private List<Cell> GetColumn(int columnIndex)
+        private IEnumerable<List<Cell>> Columns
         {
-            List<Cell> column = new List<Cell>();
-
-            for (int i = 0; i < ARRAY_SIZE; i++)
+            get
             {
-                column.Add(new Cell(i, columnIndex, _array[i, columnIndex]));
+                return (
+                            from columnIndex in Enumerable.Range(0, ARRAY_SIZE)
+                            select
+                            (
+                                from rowIndex in Enumerable.Range(0, ARRAY_SIZE)
+                                select new Cell(rowIndex, columnIndex, _array[rowIndex, columnIndex])
+                            ).ToList<Cell>()
+                       ).AsEnumerable<List<Cell>>();
             }
-
-            return column;
         }
 
         private void Debug(int[,] workArray, List<Cell> saddlePoints, string info)
