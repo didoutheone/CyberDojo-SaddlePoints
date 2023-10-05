@@ -4,49 +4,15 @@ using System.Linq;
 
 namespace MySaddlePoints
 {
-    public class Cell
-    {
-        public int Row { get; private set; }
-
-        public int Column { get; private set; }
-
-        public int Value { get; private set; }
-
-        public Cell(int row, int column, int value)
-        {
-            Row = row;
-            Column = column;
-            Value = value;
-        }
-
-        override public bool Equals(object obj)
-        {
-            return Equals(obj as Cell);
-        }
-
-        public bool Equals(Cell other)
-        {
-            if (other == null) return false;
-            return Row == other.Row && Column == other.Column && Value == other.Value;
-        }
-
-        public override int GetHashCode()
-        {
-            return Row.GetHashCode() ^ Column.GetHashCode() ^ Value.GetHashCode();
-        }
-    }
-
     public class Matrix
     {
-        private int[,] _array;
-
-        public Matrix()
-        {
-            _array = GetZeroArray();
-        }
+        private const int ARRAY_SIZE = 5;
+        private int[,] _array = new int[ARRAY_SIZE, ARRAY_SIZE];
 
         public void SetPoint(int row, int column, int value)
         {
+            if (row >= ARRAY_SIZE || column >= ARRAY_SIZE) throw new CellOutOfArrayException(row, column);
+
             _array[row, column] = value;
         }
 
@@ -70,7 +36,7 @@ namespace MySaddlePoints
         private List<Cell> GetCellsWithMaxValueOfEachRow()
         {
             List<Cell> result = new List<Cell>();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < ARRAY_SIZE; i++)
             {
                 List<Cell> row = GetRow(i);
                 IEnumerable<Cell> cellsWithMaxValuesForThisRow = (from cell in row
@@ -87,7 +53,7 @@ namespace MySaddlePoints
         private List<Cell> GetCellsWithMinValueOfEachColumn()
         {
             List<Cell> result = new List<Cell>();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < ARRAY_SIZE; i++)
             {
                 List<Cell> column = GetColumn(i);
                 IEnumerable<Cell> cellsWithMinValuesForThisColumn = (from cell in column
@@ -101,47 +67,37 @@ namespace MySaddlePoints
             return result;
         }
 
-        private int[,] GetZeroArray()
+        private List<Cell> GetRow(int rowIndex)
         {
-            return new int[,]
+            List<Cell> row = new List<Cell>();
+
+            for (int i = 0; i < ARRAY_SIZE; i++)
             {
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0}
-            };
+                row.Add(new Cell(rowIndex, i, _array[rowIndex, i]));
+            }
+
+            return row;
         }
 
-        private List<Cell> GetRow(int i)
+        private List<Cell> GetColumn(int columnIndex)
         {
-            return new List<Cell> {
-                new Cell(i, 0, _array[i, 0]),
-                new Cell(i, 1, _array[i, 1]),
-                new Cell(i, 2, _array[i, 2]),
-                new Cell(i, 3, _array[i, 3]),
-                new Cell(i, 4, _array[i, 4])
-            };
-        }
+            List<Cell> column = new List<Cell>();
 
-        private List<Cell> GetColumn(int j)
-        {
-            return new List<Cell> {
-                new Cell(0, j, _array[0, j]),
-                new Cell(1, j, _array[1, j]),
-                new Cell(2, j, _array[2, j]),
-                new Cell(3, j, _array[3, j]),
-                new Cell(4, j, _array[4, j])
-            };
+            for (int i = 0; i < ARRAY_SIZE; i++)
+            {
+                column.Add(new Cell(i, columnIndex, _array[i, columnIndex]));
+            }
+
+            return column;
         }
 
         private void Debug(int[,] workArray, List<Cell> saddlePoints, string info)
         {
             Console.WriteLine(info);
             // Debug
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < ARRAY_SIZE; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < ARRAY_SIZE; j++)
                 {
                     if (saddlePoints.Contains(new Cell(i, j, _array[i, j])))
                     {
